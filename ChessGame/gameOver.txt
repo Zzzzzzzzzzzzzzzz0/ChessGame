@@ -1,0 +1,8 @@
+GameOver
+
+The game will be over when one of the king is dead.
+
+Notes: 
+If the King is in check position you need to move your king or block the way or attack back the piece that is attacking the king. You cannot move other pieces while you are under attack.
+
+If the King is in checkMatePosition you need to move your king or block the way or attack back the piece that is attacking the king. If you move the other piece, you king will be eleminated will next time by your opponent

@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1.0">
+  <zoom_level>9</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>306</x>
+      <y>243</y>
+      <w>261</w>
+      <h>252</h>
+    </coordinates>
+    <panel_attributes>Piece
+--
+-xLocation :Int
+-yLocation :Int
+-image :Icon
+-pieceColor :String
+-pieceName :String
+-clickedX :Int
+-clickedY :Int
+--
++Piece(board:Board,x:Int,y:Int,image:Icon)
++getClickedPiece(x:Int,y:Int) :void
++checkBlackOrWhite(button: JButton) :String
++getPieceName(button :JButton) : String
++moveTo(x :Int,y :Int) : void
++attack(x :Int,y :Int) :void
++isTheSameButton(x :Int,y :Int) :boolean
++validateMove(x :Int, y :Int) :void
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>594</x>
+      <y>189</y>
+      <w>297</w>
+      <h>153</h>
+    </coordinates>
+    <panel_attributes>Rook
+--
+
+--
++Rook(board :Board,x :Int, y :Int, image: ImageIcon)
++setRookPosition() :void
++validateMove(x :Int, y :Int) :void
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>315</x>
+      <y>36</y>
+      <w>189</w>
+      <h>153</h>
+    </coordinates>
+    <panel_attributes>Board
+--
+-isBlackTurn: boolean
+-squares: JButton[][]
+-numRows: Int
+-numCols: Int
+--
++Board()
++hasGreen():boolean
++hasRed():boolean
++refresh()	:void</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>594</x>
+      <y>522</y>
+      <w>306</w>
+      <h>153</h>
+    </coordinates>
+    <panel_attributes>Bishop
+--
+
+--
++Bishop(board :Board,x :Int, y :Int, image: ImageIcon)
++setBishopPosition() :void
++validateMove(x :Int, y :Int) :void
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>594</x>
+      <y>360</y>
+      <w>306</w>
+      <h>153</h>
+    </coordinates>
+    <panel_attributes>Knight
+--
+
+--
++Knight(board :Board,x :Int, y :Int, image: ImageIcon)
++setKnightPosition() :void
++validateMove(x :Int, y :Int) :void
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>900</x>
+      <y>126</y>
+      <w>306</w>
+      <h>153</h>
+    </coordinates>
+    <panel_attributes>Queen
+--
+
+--
++Queen(board :Board,x :Int, y :Int, image: ImageIcon)
++setQueenPosition() :void
++validateMove(x :Int, y :Int) :void
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>927</x>
+      <y>333</y>
+      <w>297</w>
+      <h>153</h>
+    </coordinates>
+    <panel_attributes>King
+--
+
+--
++King(board :Board,x :Int, y :Int, image: ImageIcon)
++setKingPosition() :void
++validateMove(x :Int, y :Int) :void
++isCheck() : boolean
++isCheckMate() : boolean
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>54</x>
+      <y>180</y>
+      <w>189</w>
+      <h>99</h>
+    </coordinates>
+    <panel_attributes>Game
+--
+
+--
+-startGame() : void
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>558</x>
+      <y>342</y>
+      <w>387</w>
+      <h>27</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;410.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>558</x>
+      <y>171</y>
+      <w>360</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;100.0;30.0;10.0;380.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>558</x>
+      <y>270</y>
+      <w>54</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;20.0;40.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>558</x>
+      <y>396</y>
+      <w>54</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;40.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>558</x>
+      <y>468</y>
+      <w>54</w>
+      <h>117</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;40.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>513</x>
+      <y>108</y>
+      <w>99</w>
+      <h>153</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;150.0;60.0;10.0;90.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>234</x>
+      <y>117</y>
+      <w>99</w>
+      <h>135</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>90.0;10.0;10.0;130.0</additional_attributes>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>270</x>
+      <y>117</y>
+      <w>63</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>board
+style=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>234</x>
+      <y>243</y>
+      <w>90</w>
+      <h>135</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>80.0;130.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>261</x>
+      <y>315</y>
+      <w>72</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>piece
+style=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>387</x>
+      <y>180</y>
+      <w>27</w>
+      <h>81</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;10.0;10.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>594</x>
+      <y>18</y>
+      <w>297</w>
+      <h>153</h>
+    </coordinates>
+    <panel_attributes>Pawn
+--
+
+--
++Pawn(board :Board,x :Int, y :Int, image: ImageIcon)
++setPawnPosition() :void
++validateMove(x :Int, y :Int) :void
++checkAttack(x :Int, y :Int) :void
++checkPromotion(x :Int, y :Int) :boolean
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
